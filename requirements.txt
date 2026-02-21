@@ -1,1 +1,3 @@
-python-telegram-bot==20.3
+telethon==1.30.0
+aiohttp
+jdatetime
