@@ -1,0 +1,2 @@
+# Bot.opl
+Bot.sely
