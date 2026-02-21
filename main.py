@@ -2,6 +2,19 @@ import re
 import asyncio
 from datetime import datetime
 import jdatetime
+from PIL import Image
+import io
+
+def detect_image_type(data_bytes):
+    try:
+        img = Image.open(io.BytesIO(data_bytes))
+        return img.format  # 'JPEG', 'PNG', ...
+    except Exception:
+        return None
+
+# مثال استفاده:
+# img_type = detect_image_type(file_bytes)
+# if img_type == 'JPEG': ...
 
 from telethon import TelegramClient, events
 from telethon.errors import (
